@@ -11,7 +11,7 @@
   --primary-light-400: #fff;
   --primary-dark-400: #1a232e;
 
-  -secondary-400: #00927a;
+  -secondary-400: #00947b;
 }
 
 html,
@@ -36,9 +36,13 @@ body {
   }
 }
 
+textarea:focus {
+  outline: none;
+}
+
 .my-container {
   @apply px-6 sm:px-16;
-  width: min(1280px, 100%);
+  width: min(1300px, 100%);
   margin-inline: auto;
 }
 
@@ -52,4 +56,65 @@ section {
 
 .cta {
   @apply rounded-full bg-secondary-400 py-[10px] px-[26px] text-lg shadow-2xl;
+}
+
+a,
+button {
+  transition: all 0.3s ease-in-out;
+}
+a:hover,
+button:hover {
+  opacity: 0.75;
+}
+a:active,
+button:active {
+  scale: 1.025;
+}
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #00927a 0%, #26d0ce 51%, #00927a 100%);
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* .swiper-wrapper {
+  @apply gap-10 md:gap-20;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide {
+  @apply max-w-[40px] sm:max-w-fit;
+  width: fit-content !important;
+  height: fit-content !important;
+}
+ */
+.swiper-pagination .swiper-pagination-bullet {
+  width: 40px;
+  height: 3px;
+  background: #b2b2da;
+  opacity: 1;
+  border-radius: 2px;
+  margin: 0 5px;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: #ccb260;
 }
