@@ -310,7 +310,7 @@ export default function Home({}) {
       <AnimatePresence>
         {isOcrModalOpen && (
           <Modal className="title" setIsOpen={() => setIsOcrModalOpen("")}>
-            <p className="mt-4 h-[300px] w-[400px] whitespace-pre-line rounded-md bg-slate-700  p-8 text-center	">
+            <p className="mt-4 h-[300px] w-[400px] overflow-auto whitespace-pre-line rounded-md bg-slate-700  p-8 text-center	">
               {ocrText}
             </p>
             <div className="relative mt-2  h-full w-full rounded-full ">

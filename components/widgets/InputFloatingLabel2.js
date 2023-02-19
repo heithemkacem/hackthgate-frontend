@@ -10,7 +10,7 @@ const InputFloatingLabel2 = ({
   id,
   error,
 }) => {
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setIsFocused] = useState(true);
   const labelRef = useRef(null);
 
   const onChange = (e) => {
